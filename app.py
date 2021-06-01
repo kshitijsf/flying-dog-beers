@@ -58,7 +58,7 @@ employee_options = [{'label': i, 'value': i} for i in customer['Employee '].uniq
 
 data_options = [{'label':'Customer Name', 'value':'Customer Name'}, {'label':'Country', 'value':'Country'}, {'label':'Employee', 'value':'Employee'}]
 
-app = dash.Dash(external_stylesheets=[dbc.themes.SOLAR])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SOLAR])
 server = app.server
 auth = dash_auth.BasicAuth(
     app,
